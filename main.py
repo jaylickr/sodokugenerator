@@ -43,9 +43,13 @@ def fix_collum(grid):
                 else:
                     dupetile.append(grid[row][collum])
                     break
+            
 
     return dupetile
 
+#test
+#goodbye
 
+#this is master
 
 grid = Generate_Rand_Grid()
