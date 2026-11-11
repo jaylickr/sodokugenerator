@@ -33,23 +33,23 @@ def display_grid(grid):
 
 def fix_collum(grid):
     dupetile = []
+    newgrid = grid
 
     for collum in range(len(grid)):
         for row in range(len(grid)):
             while True:
-                if grid[row][collum] in dupetile:
+                if newgrid[row][collum] in dupetile:
                     nextNum = randint(1,9)
-                    grid[row][collum] = nextNum
+                    newgrid[row][collum] = nextNum
                 else:
                     dupetile.append(grid[row][collum])
                     break
-            
+        dupetile = []
+        
+    return newgrid
 
-    return dupetile
-
-#test
-#goodbye
-
-#this is master
-
-grid = Generate_Rand_Grid()
+grid1 = Generate_Rand_Grid()
+display_grid(grid1)
+print("")
+grid1 = fix_collum(grid1)
+display_grid(grid1)
