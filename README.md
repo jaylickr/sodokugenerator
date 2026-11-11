@@ -1,0 +1,2 @@
+# sodokugenerator
+python
